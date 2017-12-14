@@ -1,0 +1,21 @@
+Sabrina Palmer
+Homework 4
+
+I worked alone.
+
+For this homework, I made 4 classes.
+	In User, I constructed a user with the same input data values in the JSON file.
+I also included a list of matches for each users to store thier matches.
+Then I made methods to add matches and find matches etc. so that I could work with the users.
+	In Link, I constructed a link with two users and added each user to the other users matches list.
+	In Tinder, I constructed two lists: a users list and a links list to store the matches that were made.
+Then I made the method addUser which checks if the users list already has the user.
+If it does not, I added the new user to the ArrayList of users and then moved on to check if the new user should be matched with any previous users.
+To do this, I made a for loop that traversed the list of users and checked if the following conditions were satisfied with each user and the new user:
+		1. If the gender of the new user is the same as the gender the previous user is interested in.
+		2. If the gender of the previous user is the same as the gender the new user is interested in.
+		3. If the distance between them is less than the default radius of 10 miles. (this can easily be changed to r where r is min(v1.radius, v2.radius)  )
+If those conditions are satisfied with any other user and a new user, a link is created between the new user and the old one.
+	In myTinder, I used org.json.simple parser to parse the JSON file of users. 
+For each user in the JSON file, I parsed each new data as the appropriate data type in Java (String or double).
+Then I made a new user with the data I just parsed and ran the addUser with the new user.
